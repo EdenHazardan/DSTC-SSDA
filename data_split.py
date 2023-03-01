@@ -11,10 +11,10 @@ from PIL import Image
 
 
 def main():
-    all_file = '/home/gaoy/SSDA/data/city_list/train.txt'
+    all_file = '/home/gaoy/CCDLD-SSDA/data/city_list/train.txt'
 
-    sup_file = '/home/gaoy/SSDA/data/city_list/train_sup_100.txt'
-    unsup_file = '/home/gaoy/SSDA/data/city_list/train_unsup_100.txt'
+    sup_file = '/home/gaoy/CCDLD-SSDA/data/city_list/train_sup_100.txt'
+    unsup_file = '/home/gaoy/CCDLD-SSDA/data/city_list/train_unsup_100.txt'
 
     with open(all_file, 'r') as f:
         all_lines = f.readlines()
