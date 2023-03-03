@@ -1,5 +1,5 @@
-# CCDLD-SSDA
-This repository is released for double-blind submission, which can reproduce the main results (our proposed CCDLD) of the experiment on VIPER to Cityscapes-Seq.  Experiments on the SYNTHIA-Seq to Cityscapes-Seq can be easily implemented by slightly modifying the dataset and setting.
+# CDLD-SSDA
+This repository is released for double-blind submission, which can reproduce the main results (our proposed CDLD) of the experiment on VIPER to Cityscapes-Seq.  Experiments on the SYNTHIA-Seq to Cityscapes-Seq can be easily implemented by slightly modifying the dataset and setting.
 
 ## Install & Requirements
 
@@ -20,7 +20,7 @@ You need to download the [GTA5](https://download.visinf.tu-darmstadt.de/data/fro
 
 Your directory tree should be look like this:
 ```
-./CCDLD-SSDA/data
+./CDLD-SSDA/data
 ├── cityscapes
 |  ├── gtFine
 |  |  |—— train
@@ -36,18 +36,18 @@ Your directory tree should be look like this:
 To get the list of 100 annotated samples of target domain:
 
 ```
-python CCDLD-SSDA/data_split.py
+python CDLD-SSDA/data_split.py
 ```
 
 ## Training 
 To realize CI, we need warm-up model on source and target domain, respectively.
 
 ```
-bash CCDLD-SSDA/exp/warm-up/source_only/script/train.sh
-bash CCDLD-SSDA/exp/warm-up/target_100_only/train.sh
+bash CDLD-SSDA/exp/warm-up/source_only/script/train.sh
+bash CDLD-SSDA/exp/warm-up/target_100_only/train.sh
 ```
 
-Then, we can train the segmentation model with CCDLD.
+Then, we can train the segmentation model with CDLD.
 ```
-bash CCDLD-SSDA/exp/co-training/CCDLD_100/script/train.sh
+bash CDLD-SSDA/exp/co-training/CDLD_100/script/train.sh
 ```
