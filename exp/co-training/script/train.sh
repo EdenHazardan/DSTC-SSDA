@@ -1,6 +1,6 @@
 cd /home/gaoy/CDLD-SSDA && \
 python3 exp/co-training/python/train.py \
-        --exp_name CCDLD_100 \
+        --exp_name CDLD_100 \
         --weight_res101 /home/gaoy/CDLD-SSDA/pretrained/DeepLab_resnet_pretrained_init-f81d91e8.pth \
         --lr 2.5e-4 \
         --distance 2 \
