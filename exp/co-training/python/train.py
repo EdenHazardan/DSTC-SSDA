@@ -79,11 +79,11 @@ def train():
 
     # network
     net_1 = deeplabv2_img_model(weight_res101=args.weight_res101).cuda()
-    src_weight = torch.load('/home/gaoy/CCDLD-SSDA/work_dirs/warm-up/source_only/best_city.pth')
+    src_weight = torch.load('/home/gaoy/DSTC-SSDA/work_dirs/warm-up/source_only/best_city.pth')
     net_1.load_state_dict(src_weight, strict=True)
 
     net_2 = deeplabv2_img_model(weight_res101=args.weight_res101).cuda()
-    trg_weight = torch.load('/home/gaoy/CCDLD-SSDA/work_dirs/warm-up/target_100_only/best_city.pth')
+    trg_weight = torch.load('/home/gaoy/DSTC-SSDA/work_dirs/warm-up/target_100_only/best_city.pth')
     net_2.load_state_dict(trg_weight, strict=True)
 
 
