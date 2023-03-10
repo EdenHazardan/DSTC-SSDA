@@ -59,36 +59,10 @@ class IterLoader:
         return len(self._dataloader)
 
 
-def get_rcs_class_probs(data_root, temperature=0.01):
-    with open(osp.join(data_root, 'sample_class_stats.json'), 'r') as of:
-        sample_class_stats = json.load(of)
-        # print("sample_class_stats = ",len(sample_class_stats))
-    data_len = len(sample_class_stats)
-    overall_class_stats = {}
-    for s in sample_class_stats:
-        s.pop('file')
-        for c, n in s.items():
-            c = int(c)
-            if c not in overall_class_stats:
-                overall_class_stats[c] = n
-            else:
-                overall_class_stats[c] += n
-    overall_class_stats = {
-        k: v
-        for k, v in sorted(
-            overall_class_stats.items(), key=lambda item: item[1])
-    }
-    freq = torch.tensor(list(overall_class_stats.values()))
-    freq = freq / torch.sum(freq)
-    freq = 1 - freq
-    freq = torch.softmax(freq / temperature, dim=-1)
-
-    return list(overall_class_stats.keys()), freq.numpy(), data_len
-
 
 class synthia_dataset(Dataset):
     def __init__(self, split='train', pseudo=None):
-        self.data_path = '/home/gaoy/SSDA/data'
+        self.data_path = '/home/gaoy/DSTC-SSDA/data'
         self.im_path = os.path.join(self.data_path, 'synthia/RGB')
         self.gt_path = os.path.join(self.data_path, 'synthia/GT/LABELS')
         self.split = split
@@ -178,7 +152,7 @@ class synthia_dataset(Dataset):
 
 class synthia_dataset_crop(Dataset):
     def __init__(self, split='train', pseudo=None):
-        self.data_path = '/home/gaoy/SSDA/data'
+        self.data_path = '/home/gaoy/DSTC-SSDA/data'
         self.im_path = os.path.join(self.data_path, 'synthia/RGB')
         self.gt_path = os.path.join(self.data_path, 'synthia/GT/LABELS')
         self.split = split
@@ -282,25 +256,3 @@ class synthia_dataset_crop(Dataset):
             return img, gt, im_name
         return img, gt
 
-
-
-if __name__ == '__main__':
-    
-    dataset = synthia_dataset_crop()
-    dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=1)
-    for i, data in enumerate(dataloader):
-        img, gt = data
-        print('{}/{}'.format(i, len(dataloader)), img.shape, gt.shape, gt.max(),  gt.min())
-
-
-    # dataset = gta5_dataset_crop_subset(split='train', class_id=16)
-    # dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=4)
-    # for i, data in enumerate(dataloader):
-    #     img, gt = data
-    #     if 16 in torch.unique(gt):
-    #         print("yes")
-    #     else:
-    #         print("no")
-    # rcs_classes, rcs_classprob =  get_rcs_class_probs('/data/gaoy/SSDA/dataset/GTA5')
-    # print("rcs_classes = ",rcs_classes)
-    # print("rcs_classprob = ",rcs_classprob)

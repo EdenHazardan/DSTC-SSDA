@@ -93,7 +93,7 @@ class IterLoader:
 
 class cityscapes_dataset(Dataset):
     def __init__(self, split='train', semi_sup=None, semi_unsup=None, pseudo=None, synthia=False):
-        self.data_path = '/home/gaoy/SSDA/data'
+        self.data_path = '/home/gaoy/DSTC-SSDA/data'
         self.im_path = os.path.join(self.data_path, 'cityscapes', 'leftImg8bit', split)
         self.gt_path = os.path.join(self.data_path, 'cityscapes', 'gtFine', split)
         self.split = split
@@ -199,7 +199,7 @@ class cityscapes_dataset(Dataset):
 
 class cityscapes_dataset_crop(Dataset):
     def __init__(self, split='train', semi_sup=None, semi_unsup=None, pseudo=None, synthia=False):
-        self.data_path = '/home/gaoy/SSDA/data'
+        self.data_path = '/home/gaoy/DSTC-SSDA/data'
         self.im_path = os.path.join(self.data_path, 'cityscapes', 'leftImg8bit', split)
         self.gt_path = os.path.join(self.data_path, 'cityscapes', 'gtFine', split)
         self.split = split
