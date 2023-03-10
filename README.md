@@ -40,7 +40,7 @@ python DSTC-SSDA/data_split.py
 ```
 
 ## Training 
-To realize CI, we need warm-up model on source and target domain, respectively.
+To realize DSI, we need warm-up model on source and target domain, respectively.
 
 ```
 bash DSTC-SSDA/exp/warm-up/source_only/script/train.sh
