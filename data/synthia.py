@@ -16,10 +16,6 @@ from torch.utils.data import Dataset, DataLoader
 import torchvision.transforms as ttransforms
 
 import imageio
-os.environ['IMAGEIO_USERDIR'] = '/home/gaoy/Video_domain_adaptation_segmentation/freeimage'
-imageio.core.util.appdata_dir("imageio")
-imageio.plugins.freeimage.download()
-ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 
 IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=np.float32)
@@ -27,8 +23,6 @@ IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=np.float32
 label_name=["road", "sidewalk", "building", "wall", "fence", "pole", "light", "sign", "vegetation", "sky", "person", "rider", "car", "bus", "motocycle", "bicycle"]
 NUM_CLASS = 16
 
-# label_name=["road", "sidewalk", "building", "light", "sign", "vegetation", "sky", "person", "rider", "car", "bus", "motocycle", "bicycle"]
-# NUM_CLASS = 13
 
 synthia_set_16 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 15, 17, 18]
 
