@@ -1,5 +1,5 @@
 # DSTC-SSDA
-This repository is released for double-blind submission, which can reproduce the main results (our proposed DSTC) of the experiment on VIPER to Cityscapes-Seq.  Experiments on the SYNTHIA-Seq to Cityscapes-Seq can be easily implemented by slightly modifying the dataset and setting.
+This repository is released for double-blind submission, which can reproduce the main results (our proposed DSTC) of the experiment on GTA5 to Cityscapes.  Experiments on the SYNTHIA to Cityscapes can be easily implemented by slightly modifying the dataset and setting.
 
 ## Install & Requirements
 
