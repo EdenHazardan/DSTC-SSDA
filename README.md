@@ -1,6 +1,10 @@
 # DSTC-SSDA
 This repository is released for double-blind submission, which can reproduce the main results (our proposed DSTC) of the experiment on GTA5 to Cityscapes.  Experiments on the SYNTHIA to Cityscapes can be easily implemented by slightly modifying the dataset and setting.
 
+## Demo Video
+The demonstration video will be released soon.
+
+
 ## Install & Requirements
 
 The code has been tested on pytorch=1.8.0 and python3.8. Please refer to ``requirements.txt`` for detailed information.
