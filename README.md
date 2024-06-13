@@ -7,6 +7,9 @@ Delve into Source and Target Collaboration in Semi-supervised Domain Adaptation 
 Yuan Gao, Zilei Wang, Yixin, Zhang.
 University of Science and Technology of China.
 
+## Abstract
+Abstract—Semi-supervised domain adaptation (SSDA) for semantic segmentation aims to train a model that performs well on target domain by learning from both fully-labeled source domain and partially-labeled target domain data. The key to this task is how to collaborate the labeled data from both domains, as well as the unlabeled data, to benefit the model training complementarily. In this paper, we innovatively achieve this goal from both data combination and model mergence perspectives. To this end, we propose a co-training framework based on siamese networks, where two networks are encouraged to learn from each other by cross-supervision with pseudo labels of unlabeled data. Meanwhile, for the labeled data, we enforce two networks to separately learn the knowledge dominated by source domain and target domain. Specifically, we propose domain- specific initialization and differentiated cross-domain combina- tion of labeled data. Moreover, we propose a target-preferred alignment method to encourage the source-biased network to optimize towards target domain, as the target-biased network is more in line with the task than the source-biased network. We conduct extensive experiments on two challenging benchmarks, and the results demonstrate the effectiveness of our method, which outperforms previous state-of-the-art methods with con- siderable performance improvement.
+
 ## Install & Requirements
 
 The code has been tested on pytorch=1.8.0 and python3.8. Please refer to ``requirements.txt`` for detailed information.
