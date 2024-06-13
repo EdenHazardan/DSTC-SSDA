@@ -2,7 +2,7 @@
 This repository is released that can reproduce the main results (our proposed DSTC) of the experiment on GTA5 to Cityscapes. Experiments on the SYNTHIA to Cityscapes can be easily implemented by slightly modifying the dataset and setting.
 
 ## Paper
-![image](https://github.com/EdenHazardan/DSTC-SSDA/blob/master/framework4.pdf)
+![image](https://github.com/EdenHazardan/DSTC-SSDA/blob/master/DSTC.PNG)
 Delve into Source and Target Collaboration in Semi-supervised Domain Adaptation for Semantic Segmentation
 Yuan Gao, Zilei Wang, Yixin, Zhang.
 University of Science and Technology of China.
