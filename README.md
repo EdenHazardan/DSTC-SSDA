@@ -1,9 +1,11 @@
-# DSTC-SSDA
-This repository is released for double-blind submission, which can reproduce the main results (our proposed DSTC) of the experiment on GTA5 to Cityscapes.  Experiments on the SYNTHIA to Cityscapes can be easily implemented by slightly modifying the dataset and setting.
+# Delve into Source and Target Collaboration in Semi-supervised Domain Adaptation for Semantic Segmentation (ICME 2024 Oral)
+This repository is released that can reproduce the main results (our proposed DSTC) of the experiment on GTA5 to Cityscapes. Experiments on the SYNTHIA to Cityscapes can be easily implemented by slightly modifying the dataset and setting.
 
-## Demo Video
-The demonstration video will be released soon.
-
+## Paper
+![image](https://github.com/EdenHazardan/DSTC-SSDA/blob/master/framework4.pdf)
+Delve into Source and Target Collaboration in Semi-supervised Domain Adaptation for Semantic Segmentation
+Yuan Gao, Zilei Wang, Yixin, Zhang.
+University of Science and Technology of China.
 
 ## Install & Requirements
 
